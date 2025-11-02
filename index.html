@@ -3,105 +3,112 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JIGUMA | つなぐ力で、価値を組み上げる</title>
-  <meta name="description" content="JIGUMAは、分断された課題を“ジグソーパズル”のようにつなぎ、成果へ導く伴走型のソリューション企業です。" />
+  <title>JIGUMA | Connect the Pieces, Define the Future.</title>
+  <meta name="description" content="JIGUMAはジグソーのように戦略・デザイン・テクノロジーを組み合わせ、価値を完成させるパートナーです。">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="JIGUMA | つなぐ力で、価値を組み上げる" />
-  <meta property="og:description" content="Strategy × Design × Technology. Connect the Pieces, Define the Future." />
-  <meta name="theme-color" content="#f6f6f7" />
-
-  <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css" />
-
-  <!-- ✅ フォントCLS対策 -->
-  <style>
-    @font-face {
-      font-family: 'Playfair Display';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: local("Playfair Display");
-    }
-    @font-face {
-      font-family: 'Noto Serif JP';
-      font-style: normal;
-      font-weight: 600;
-      font-display: swap;
-      src: local("Noto Serif JP");
-    }
-  </style>
-
   <script defer src="/script.js"></script>
+
+  <!-- CLS対策（ローカルにある体でfallback宣言） -->
+  <style>
+    @font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:swap;src:local("Playfair Display")}
+    @font-face{font-family:'Noto Serif JP';font-style:normal;font-weight:600;font-display:swap;src:local("Noto Serif JP")}
+  </style>
 </head>
 <body class="light">
-  <header class="site-header">
-    <a class="brand" href="#top">
-      <img src="/logo.svg" alt="JIGUMAロゴ" width="28" height="28" loading="eager"> JIGUMA
-    </a>
-    <nav class="site-nav">
-      <a href="#services">サービス</a>
-      <a href="#about">会社情報</a>
-      <a href="#contact" class="nav-cta">お問い合わせ</a>
-    </nav>
+  <!-- Header -->
+  <header id="header" class="site-header is-transparent" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="JIGUMA">
+        <img src="/logo.svg" alt="" width="28" height="28" class="logo"> <span>JIGUMA</span>
+      </a>
+
+      <nav class="site-nav" aria-label="メインナビ">
+        <div class="nav-item has-dd">
+          <a href="#services">サービス</a>
+          <div class="dropdown">
+            <a href="#services">AI自動化</a>
+            <a href="#services">Web制作</a>
+            <a href="#services">ビジネス設計</a>
+          </div>
+        </div>
+        <a class="nav-item" href="#works">実績</a>
+        <a class="nav-item" href="#about">会社情報</a>
+        <a class="nav-item cta" href="#contact">お問い合わせ</a>
+      </nav>
+
+      <button id="navToggle" class="nav-toggle" aria-label="メニュー">☰</button>
+    </div>
   </header>
 
   <main id="top">
-    <!-- ================= HERO ================= -->
+    <!-- Hero -->
     <section class="hero hero-visual">
       <div class="hero__overlay"></div>
-
-      <div class="hero__nav">
-        <nav class="hero-menu">
-          <a href="#services">サービス</a>
-          <a href="#about">会社情報</a>
-          <a href="#contact">お問い合わせ</a>
-          <a class="hero-call" href="tel:0112009610">011-200-9610</a>
-        </nav>
-      </div>
-
-      <div class="hero__center">
-        <!-- ✅ 遅延読込＋サイズ指定 -->
+      <div class="container hero__center">
         <img class="hero-logo" src="/logo.svg" alt="JIGUMAのロゴ" width="72" height="72" loading="eager">
-        <h1 class="hero-title">JIGUMA</h1>
-        <p class="hero-ja">つなぐ力で、価値を組み上げる</p>
-        <p class="hero-sub">Connect the Pieces, <strong>Define the Future.</strong></p>
-        <div class="hero-divider"></div>
-        <p class="hero-copy">
-          ジグソーパズルのように、戦略・デザイン・テクノロジーのピースを最適配置。<br>
-          断片を“完成図”へ導く伴走型チームです。
-        </p>
+        <h1 class="hero-title">Connect the Pieces,<br><span>Define the Future.</span></h1>
+        <p class="hero-sub">つなぐ力で、価値を組み上げる。</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#contact">ご相談はこちら</a>
+          <a class="btn btn-primary" href="#contact">無料相談</a>
+          <a class="btn btn-ghost" href="#services">サービスを見る</a>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">SCROLL</div>
+      </div>
+      <nav class="hero-menu" aria-label="トップメニュー">
+        <a href="#services">サービス</a>
+        <a href="#works">実績</a>
+        <a href="#about">会社情報</a>
+        <a class="hero-call" href="tel:0112009610">011-200-9610</a>
+      </nav>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section container reveal">
+      <h2 class="sec-ttl">Services</h2>
+      <p class="sec-lead">ジグソーのように最適配置。最小実装で最大の成果へ。</p>
+      <div class="grid-3">
+        <article class="card">
+          <h3>AI自動化</h3>
+          <p>ChatGPT連携、BOT/エージェント、社内検索、レポート自動化。</p>
+          <ul class="bullets"><li>要件設計 / API連携</li><li>運用伴走</li></ul>
+        </article>
+        <article class="card">
+          <h3>Web制作</h3>
+          <p>高級感と可読性の両立。ブランドサイト/LP/WordPress。</p>
+          <ul class="bullets"><li>UI/UX設計</li><li>撮影・コピー含む</li></ul>
+        </article>
+        <article class="card">
+          <h3>ビジネス設計</h3>
+          <p>KPI設計から検証、グロースまで“動く戦略”を実装。</p>
+          <ul class="bullets"><li>新規/既存強化</li><li>データドリブン改善</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Works -->
+    <section id="works" class="section section-alt reveal">
+      <div class="container">
+        <h2 class="sec-ttl">Works</h2>
+        <div class="cards">
+          <article class="case">
+            <h3>CV +58%</h3><p>導線/情報設計/CTA最適化でコンバージョン改善。</p>
+          </article>
+          <article class="case">
+            <h3>1週間ダッシュボード</h3><p>既存DBを軽量API化し意思決定速度を向上。</p>
+          </article>
+          <article class="case">
+            <h3>ブランド刷新</h3><p>トンマナ統一とUI更新で信頼性と運用性を両立。</p>
+          </article>
         </div>
       </div>
-      <div class="hero-scroll">SCROLL</div>
     </section>
 
-    <!-- ================= Services ================= -->
-    <section id="services" class="section">
-      <h2>サービス</h2>
-      <div class="grid-3">
-        <article class="card service">
-          <h3>AI自動化・開発</h3>
-          <p>ChatGPT連携、ワークフロー自動化、BOT/エージェント開発で業務を高速化。</p>
-        </article>
-        <article class="card service">
-          <h3>Web制作・ブランド</h3>
-          <p>高級感と可読性を両立したコーポレート/LP。情報設計から運用まで。</p>
-        </article>
-        <article class="card service">
-          <h3>ビジネスデザイン</h3>
-          <p>ピースの見極めと配置。KPI設計からグロースまで戦略を実装。</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ================= About ================= -->
-    <section id="about" class="section">
-      <h2>会社情報</h2>
+    <!-- About -->
+    <section id="about" class="section container reveal">
+      <h2 class="sec-ttl">About</h2>
       <div class="about">
         <div class="about__text">
           <p><strong>JIGUMA</strong> は、バラバラな課題を“つながるピース”として捉え、最小の実装で最大の成果を狙うチームです。</p>
@@ -113,57 +120,38 @@
           </ul>
         </div>
         <div class="about__visual">
-          <!-- ✅ 遅延読込・サイズ指定 -->
-          <img src="/pattern-pieces.svg" alt="ジグソーパターン" width="460" height="300" loading="lazy" class="about-bg grayscale">
+          <img src="/pattern-pieces.svg" alt="ジグソーパターン" width="520" height="340" loading="lazy" class="about-bg grayscale">
         </div>
       </div>
     </section>
 
-    <!-- ================= Contact ================= -->
-    <section id="contact" class="section">
-      <h2>お問い合わせ</h2>
-      <p>ご相談は無料です。要件が固まっていなくてもお気軽にどうぞ。</p>
-      <form class="contact" onsubmit="return false;">
-        <label>お名前<input name="name" required></label>
-        <label>メール<input type="email" name="email" required></label>
-        <label>内容<textarea name="message" rows="4" required></textarea></label>
-        <button class="btn btn-primary" type="submit">送信</button>
-      </form>
+    <!-- Contact -->
+    <section id="contact" class="section container reveal">
+      <h2 class="sec-ttl">Contact</h2>
+      <p class="sec-lead">ご相談は無料です。要件が固まっていなくてもお気軽に。</p>
+      <div class="contact-grid">
+        <form class="contact" onsubmit="return false;">
+          <label>お名前<input name="name" required></label>
+          <label>メール<input type="email" name="email" required></label>
+          <label>内容<textarea name="message" rows="4" required></textarea></label>
+          <button class="btn btn-primary" type="submit">送信</button>
+        </form>
+        <div class="contact-side">
+          <div class="addr">
+            <div>メール：<a href="mailto:info@jiguma.example">info@jiguma.example</a></div>
+            <div>所在地：東京都（準備中）</div>
+            <a class="btn btn-ghost wide" href="tel:0112009610">お電話 011-200-9610</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <small>© <span id="year"></span> JIGUMA — Connect the Pieces, Define the Future.</small>
+    <div class="container">
+      <small>© <span id="year"></span> JIGUMA — Connect the Pieces, Define the Future.</small>
+    </div>
   </footer>
-
-  <!-- ================= HEROデザイン ================= -->
-  <style>
-    .hero-visual {
-      position: relative;
-      min-height: 88vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-      overflow: hidden;
-      background: center/cover no-repeat url('/hero.jpg');
-    }
-    .hero__overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.55) 100%);
-    }
-    .hero__nav { position: absolute; top: 22px; left: 0; right: 0; display: flex; justify-content: center; z-index: 3; }
-    .hero-menu { display: flex; gap: 22px; align-items: center; padding: 8px 14px; border-radius: 999px;
-      background: rgba(20,22,26,.18); border:1px solid rgba(255,255,255,.25); backdrop-filter: blur(8px); }
-    .hero-menu a { color:#fff; text-decoration:none; font-weight:600; letter-spacing:.02em }
-    .hero-menu a:hover { text-decoration:underline; text-underline-offset:4px; }
-    .hero-call { background:#b81f3a; padding:.45rem .8rem; border-radius:999px; }
-    .hero__center { position: relative; z-index: 2; padding: 0 18px; max-width: 1100px; }
-    .hero-title { font-family:'Playfair Display','Noto Serif JP',serif; font-weight:700; letter-spacing:.10em; font-size: clamp(36px, 7vw, 82px); margin:.2rem 0 .6rem; text-shadow:0 2px 18px rgba(0,0,0,.35); animation: risein .7s ease-out both; }
-    .hero-ja { font-family:'Noto Serif JP',serif; font-weight:600; font-size:clamp(18px,2.6vw,28px); letter-spacing:.08em; margin:0; text-shadow:0 1px 10px rgba(0,0,0,.35); animation: risein .7s ease-out both .2s; }
-    .hero-sub { font-size: clamp(14px,2vw,18px); opacity:.95; margin:.4rem 0 1rem; animation: risein .7s ease-out both .3s; }
-    .hero-divider { width:min(540px,60%); height:1px; margin:12px auto; background:linear-gradient(90deg,transparent,rgba(255,255,255,.65),transparent); }
-    .hero-copy { opac
-
-  
+</body>
+</html>
