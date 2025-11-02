@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+  <g opacity=".35">
+    <path d="M0 35a10 10 0 0 1 10-10h40a14 14 0 1 0 20 0h40a10 10 0 0 1 10 10v40a14 14 0 1 0 0 20v40a10 10 0 0 1-10 10h-40a14 14 0 1 0-20 0H10a10 10 0 0 1-10-10V95a14 14 0 1 0 0-20z" fill="url(#g)" transform="translate(20,20)"/>
+    <path d="M0 35a10 10 0 0 1 10-10h40a14 14 0 1 0 20 0h40a10 10 0 0 1 10 10v40a14 14 0 1 0 0 20v40a10 10 0 0 1-10 10h-40a14 14 0 1 0-20 0H10a10 10 0 0 1-10-10V95a14 14 0 1 0 0-20z" fill="url(#g)" transform="translate(200,100) scale(.9)"/>
+    <path d="M0 35a10 10 0 0 1 10-10h40a14 14 0 1 0 20 0h40a10 10 0 0 1 10 10v40a14 14 0 1 0 0 20v40a10 10 0 0 1-10 10h-40a14 14 0 1 0-20 0H10a10 10 0 0 1-10-10V95a14 14 0 1 0 0-20z" fill="url(#g)" transform="translate(360,40) scale(.8)"/>
+  </g>
+</svg>
